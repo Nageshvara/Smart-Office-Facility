@@ -1,6 +1,6 @@
 # Smart-Office-Facility
 
-Yes, the `MainApplication` can be considered to use a singleton pattern for the `OfficeConfiguration` instance by initializing it only once and using the same instance throughout the application. Here’s the updated explanation reflecting that:
+This repository contains the necessary Java files used to build a Smart Office application, demonstrating the application of OOPS concepts, design patterns, and best practices.
 
 ### MainApplication.java
 
@@ -9,11 +9,43 @@ Yes, the `MainApplication` can be considered to use a singleton pattern for the 
 #### Functions:
 - **`main(String[] args)`**: The main method initializes the `OfficeConfiguration` and continuously listens for user commands via the command line. It parses and handles different commands to configure rooms, add occupants, book or cancel room bookings, and display room status and usage statistics.
 - **`handleConfigCommand(String[] commandParts, OfficeConfiguration officeConfig)`**: Handles the "Config" command for configuring room count and setting room capacities.
+- Handling Config commands:
+- ![image](https://github.com/user-attachments/assets/d681b895-78a6-40c6-9251-ae231073177d)
+- ![image](https://github.com/user-attachments/assets/c8e7a8fc-8156-43ee-8793-795dcf9e3d65)
+
+
 - **`handleAddOccupantCommand(String[] commandParts, OfficeConfiguration officeConfig)`**: Handles the "Add" command for adding occupants to a specific room.
+- Handling Add occupant commands:
+- ![image](https://github.com/user-attachments/assets/144e040e-eb95-43a7-bc74-9dcedabea027)
+- ![image](https://github.com/user-attachments/assets/3891b26b-3536-4416-a956-aa289c3622dc)
+- ![image](https://github.com/user-attachments/assets/26c9cf42-abeb-4b7e-84b8-4ed72e0ef59c)
+
+
+
 - **`handleBlockRoomCommand(String[] commandParts, OfficeConfiguration officeConfig)`**: Handles the "Block" command for booking a room at a specified start time and duration.
-- **`handleCancelBookingCommand(String[] commandParts, OfficeConfiguration officeConfig)**`: Handles the "Cancel" command for canceling the booking of a specific room.
+- Handling Block room commands:
+- ![image](https://github.com/user-attachments/assets/9071dd65-4385-4860-9998-25345bb2659d)
+- ![image](https://github.com/user-attachments/assets/a01195bd-ff83-423c-8688-e263de4abb43)
+
+
+- **`handleCancelBookingCommand(String[] commandParts, OfficeConfiguration officeConfig)`**: Handles the "Cancel" command for canceling the booking of a specific room.
+- Handling Cancel room commands:
+- ![image](https://github.com/user-attachments/assets/f6520f3a-852d-447a-8c06-aad85b7ebf31)
+- ![image](https://github.com/user-attachments/assets/cf942dfe-698e-4329-8986-44fa54923ea9)
+
 - **`handleRoomStatusCommand(String[] commandParts, OfficeConfiguration officeConfig)`**: Handles the "Room" command for checking the status of a specific room and releasing its booking if necessary.
+- Handling Room status commands:
+- Checking Status initially:
+- ![image](https://github.com/user-attachments/assets/43d278b9-7dd9-4034-bda0-aed63c5a9477)
+- Checking status after no occupants are present in room longer than 5 minutes:
+- ![image](https://github.com/user-attachments/assets/7ea108c8-17f3-4ea2-8c16-c453acb73351)
+- Checking status of unbooked rooms:
+- ![image](https://github.com/user-attachments/assets/b5585917-de7e-4642-ab5d-1b9581bda407)
+
 - **`handleSummaryCommand(OfficeConfiguration officeConfig)`**: Handles the "Summary" command to display usage statistics for all configured meeting rooms.
+- Handling Summary commands:
+- ![image](https://github.com/user-attachments/assets/65d28731-16ac-447d-a3b7-06add40bd244)
+
 
 **Design Patterns**:
 - **Command Pattern**: The `MainApplication` uses the Command pattern to handle various user commands, encapsulating requests as objects (`BookRoomCommand`, `CancelBookingCommand`, etc.) to provide flexibility in executing, delaying, or queueing requests.
