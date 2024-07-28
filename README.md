@@ -1,6 +1,6 @@
 # Smart-Office-Facility
 
-This repository contains the necessary Java files used to build a Smart Office application, demonstrating the application of OOPS concepts, design patterns, and best practices.
+The src folder contains the necessary Java files used to build a Smart Office application, demonstrating the application of OOPS concepts, design patterns, and best practices.
 
 ### MainApplication.java
 
